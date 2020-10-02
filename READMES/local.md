@@ -20,9 +20,9 @@
     * The osxfs file system server has known performance issues. ([ref](https://docs.docker.com/docker-for-mac/osxfs/#performance-issues-solutions-and-roadmap), [ref](https://www.jeffgeerling.com/blog/2020/revisiting-docker-macs-performance-nfs-volumes)) These issues are exacerbated by the very large number of files present in the application. One workaround is to use an [nfs](https://en.wikipedia.org/wiki/Network_File_System) mount instead. To use nfs in your local environment:
       * First, obtain your user account's uid:
 
-      ```
-      id -u
-      ```
+        ```
+        id -u
+        ```
       
       * Then, edit the ```/etc/exports``` file (requires root access) and add the following line, replacing '{uid}' with your numeric uid:
       
