@@ -60,7 +60,7 @@
               type: nfs
               o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
               device: ":${PWD}"
-              ```
+        ```
               
       * Finally, rebuild the app: ```export LANDO_VOLUME='nfsmount' && lando rebuild``` (It's worth adding the variable export to your shell config so that you don't have to remember to use it in the future)
       * If there are no errors, verify that your app is using nfs: run ```lando ssh``` and then ```df -h /app```. You should see something like ```:/Users/username/src/va.gov-cms``` in the Filesystem column instead of ```osxfs```.
