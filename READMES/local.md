@@ -21,21 +21,21 @@
       * First, obtain your user account's uid: ```id -u```
       * Then, edit the ```/etc/exports``` file (requires root access) and add the following line, replacing '{uid}' with your numeric uid:
       
-      ```
-      /System/Volumes/Data -alldirs -mapall={uid}:20 localhost
-      ```
+        ```
+        /System/Volumes/Data -alldirs -mapall={uid}:20 localhost
+        ```
       
       * Then, edit the ```/etc/nfs.conf``` file (requires root access) and add the following line:
       
-      ```
-      nfs.server.mount.require_resv_port = 0
-      ```
+        ```
+        nfs.server.mount.require_resv_port = 0
+        ```
       
       * Next, restart the nfs server:
       
-      ```
-      sudo nfsd restart
-      ```
+        ```
+        sudo nfsd restart
+        ```
       
       * Now, you will need to update your lando configuration. Edit your ```.lando.local.yml``` file (create it if it doesn't exist) and add the following lines:
         ```
