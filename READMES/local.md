@@ -19,9 +19,24 @@
     ### EXPERIMENTAL: Mac OS performance improvements
     * The osxfs file system server has known performance issues. ([ref](https://docs.docker.com/docker-for-mac/osxfs/#performance-issues-solutions-and-roadmap), [ref](https://www.jeffgeerling.com/blog/2020/revisiting-docker-macs-performance-nfs-volumes)) These issues are exacerbated by the very large number of files present in the application. One workaround is to use an [nfs](https://en.wikipedia.org/wiki/Network_File_System) mount instead. To use nfs in your local environment:
       * First, obtain your user account's uid: ```id -u```
-      * Then, edit the ```/etc/exports``` file (requires root access) and add the following line: ```/System/Volumes/Data -alldirs -mapall={uid}:20 localhost``` (Replace '{uid}' with your numeric uid)
-      * Then, edit the ```/etc/nfs.conf``` file (requires root access) and add the following line: ```nfs.server.mount.require_resv_port = 0```
-      * Next, restart the nfs server: ```sudo nfsd restart```
+      * Then, edit the ```/etc/exports``` file (requires root access) and add the following line, replacing '{uid}' with your numeric uid:
+      
+      ```
+      /System/Volumes/Data -alldirs -mapall={uid}:20 localhost
+      ```
+      
+      * Then, edit the ```/etc/nfs.conf``` file (requires root access) and add the following line:
+      
+      ```
+      nfs.server.mount.require_resv_port = 0
+      ```
+      
+      * Next, restart the nfs server:
+      
+      ```
+      sudo nfsd restart
+      ```
+      
       * Now, you will need to update your lando configuration. Edit your ```.lando.local.yml``` file (create it if it doesn't exist) and add the following lines:
         ```
         services:
