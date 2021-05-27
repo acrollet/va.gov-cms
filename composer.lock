@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9e9f140ddfc1c90b8f4f92073d9516b",
+    "content-hash": "2030e99b436116adf8e4ec8bfcd391ad",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -11919,10 +11919,10 @@
         },
         {
             "name": "npm-asset/yarn",
-            "version": "1.21.1",
+            "version": "1.22.5",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/yarn/-/yarn-1.21.1.tgz"
+                "url": "https://registry.npmjs.org/yarn/-/yarn-1.22.5.tgz"
             },
             "type": "npm-asset",
             "license": [

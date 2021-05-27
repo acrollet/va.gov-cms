@@ -140,7 +140,7 @@
         "michelf/php-markdown": "^1.9",
         "mikey179/vfsstream": "^1.6",
         "mouf/nodejs-installer": "^1.0",
-        "npm-asset/yarn": "1.21.1",
+        "npm-asset/yarn": "1.22.5",
         "oomphinc/composer-installers-extender": "^2.0",
         "php-http/guzzle6-adapter": "^1.1",
         "phpunit/phpunit": "^7",
